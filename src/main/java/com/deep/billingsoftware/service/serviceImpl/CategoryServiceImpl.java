@@ -19,11 +19,9 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public CategoryResponse saveCategory(CategoryRequest request) {
 
-        Category category = convertToCategory(request);
-        Category response = categoryRepository.save(category);
-
-        return null;
-
+        Category newCategory = convertToCategory(request);
+          newCategory = categoryRepository.save(newCategory);
+         return convertToCategoryResponse(newCategory);
     }
 
 
@@ -44,6 +42,8 @@ public class CategoryServiceImpl implements CategoryService {
                 .imgUrl(category.getImgUrl())
                 .bgColor(category.getBgColor())
                 .description(category.getDescription())
+                .createdAt(category.getCreatedAt())
+                .updatedAt(category.getUpdatedAt())
                 .build();
     }
 }

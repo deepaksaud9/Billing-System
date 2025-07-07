@@ -27,6 +27,6 @@ public class Category extends Auditable {
     private String bgColor;
     private String imgUrl;
 
-    private LocalDateTime createdAt;
-    private String updatedAt;
+/*    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;*/
 }
