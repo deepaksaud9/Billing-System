@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
@@ -21,5 +22,5 @@ public class CategoryResponse {
     private String imgUrl;
 
     private LocalDateTime createdAt;
-    private String updatedAt;
+    private LocalDateTime updatedAt;
 }

@@ -20,8 +20,8 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryResponse saveCategory(CategoryRequest request) {
 
         Category newCategory = convertToCategory(request);
-         newCategory = categoryRepository.save(newCategory);
-         return convertToCategoryResponse(newCategory);
+        newCategory = categoryRepository.save(newCategory);
+        return convertToCategoryResponse(newCategory);
 
     }
 
@@ -43,6 +43,8 @@ public class CategoryServiceImpl implements CategoryService {
                 .imgUrl(category.getImgUrl())
                 .bgColor(category.getBgColor())
                 .description(category.getDescription())
+                .createdAt(category.getCreatedAt())
+                .updatedAt(category.getUpdatedAt())
                 .build();
     }
 }
